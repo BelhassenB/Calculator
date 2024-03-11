@@ -61,6 +61,10 @@ function divide(...args) {
         num2 += e.target.textContent  
         displayInp.textContent += e.target.textContent
 
+        if (num1 !== '') {
+            displayInp.textContent = num1 + operator + num2
+        }
+
     })})      
 
     operatorBtns.forEach(op => {
@@ -95,7 +99,7 @@ function divide(...args) {
         operate(parseFloat(num1),operator,parseFloat(num2))  
         num1 = displayInp.textContent
         num2 = ''
-        operator = ''   
+        operator = '' 
             
 
      })   
